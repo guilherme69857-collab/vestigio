@@ -273,3 +273,14 @@ nav a.active {
   font-weight: 300;
   border-top: 1px solid rgba(32, 29, 26, 0.1);
 }
+
+.site-footer p {
+  margin: 0 0 0.4rem;
+}
+
+.site-footer-legal {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  opacity: 0.7;
+  margin-bottom: 0 !important;
+}

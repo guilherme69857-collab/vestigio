@@ -1,5 +1,9 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+const grain = document.createElement("div");
+grain.className = "grain";
+document.body.appendChild(grain);
+
 const overlayHeader = document.querySelector(".site-header--overlay");
 if (overlayHeader) {
   const updateHeader = () => {
@@ -42,6 +46,17 @@ if (dropsList && typeof drops !== "undefined") {
     });
 
     panel.appendChild(grid);
+
+    grid.addEventListener(
+      "wheel",
+      (event) => {
+        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+          event.preventDefault();
+          grid.scrollLeft += event.deltaY;
+        }
+      },
+      { passive: false }
+    );
 
     button.addEventListener("click", () => {
       const isOpen = button.getAttribute("aria-expanded") === "true";

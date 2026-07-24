@@ -161,6 +161,14 @@ nav a.active {
   color: #fff;
 }
 
+.hero-logo {
+  width: min(38vw, 220px);
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  filter: invert(1) brightness(2);
+}
+
 .tagline {
   font-weight: 300;
   font-size: 1.35rem;

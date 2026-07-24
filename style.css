@@ -273,6 +273,9 @@ nav a.active {
 
 .piece-card {
   background: none;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .piece-image {
@@ -309,6 +312,117 @@ nav a.active {
   font-weight: 300;
   margin: 0;
   max-width: 32ch;
+}
+
+.gallery-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  background: var(--color-text);
+  color: var(--color-bg);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+@media (hover: none) {
+  .gallery-cursor {
+    display: none;
+  }
+}
+
+.piece-back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.piece-back:hover {
+  color: var(--color-accent);
+}
+
+.piece-detail-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.piece-detail-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.piece-detail-info {
+  padding-top: 0.5rem;
+}
+
+.piece-detail-info .piece-back {
+  display: block;
+}
+
+.piece-detail-number {
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.piece-detail-info h1 {
+  font-weight: 300;
+  font-size: 2.25rem;
+  margin: 0 0 0.75rem;
+}
+
+.piece-detail-price {
+  color: var(--color-accent);
+  font-weight: 500;
+  font-size: 1.15rem;
+  margin: 0 0 2rem;
+}
+
+.piece-detail-story {
+  color: var(--color-text-muted);
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 0 0 2.5rem;
+  max-width: 48ch;
+}
+
+.piece-detail-cta {
+  display: inline-block;
+  border: 1px solid var(--color-text);
+  color: var(--color-text);
+  text-decoration: none;
+  padding: 0.9rem 2rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.piece-detail-cta:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+@media (max-width: 780px) {
+  .piece-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .site-footer {

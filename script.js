@@ -47,17 +47,6 @@ if (dropsList && typeof drops !== "undefined") {
 
     panel.appendChild(grid);
 
-    grid.addEventListener(
-      "wheel",
-      (event) => {
-        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-          event.preventDefault();
-          grid.scrollLeft += event.deltaY;
-        }
-      },
-      { passive: false }
-    );
-
     button.addEventListener("click", () => {
       const isOpen = button.getAttribute("aria-expanded") === "true";
       button.setAttribute("aria-expanded", String(!isOpen));

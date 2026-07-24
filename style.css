@@ -75,23 +75,50 @@ nav a:hover {
 }
 
 .hero {
-  padding: 8rem 0 5rem;
+  position: relative;
+  height: 92vh;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  overflow: hidden;
+  background: #111;
+}
+
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 8, 6, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin: 0 0 0.75rem;
   letter-spacing: -0.01em;
+  color: #fff;
 }
 
 .tagline {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.35rem;
-  color: var(--color-text-muted);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
 }
 
@@ -139,6 +166,45 @@ nav a:hover {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 0.85rem !important;
+}
+
+.drop-item {
+  border-bottom: 1px solid rgba(32, 29, 26, 0.12);
+}
+
+.drop-item:first-child {
+  border-top: 1px solid rgba(32, 29, 26, 0.12);
+}
+
+.drop-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  text-align: left;
+}
+
+.drop-toggle::after {
+  content: "+";
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  transition: transform 0.2s ease;
+}
+
+.drop-toggle[aria-expanded="true"]::after {
+  content: "\2212";
+}
+
+.drop-panel {
+  padding-bottom: 2rem;
 }
 
 .piece-grid {

@@ -27,7 +27,11 @@
 
   <main>
     <section class="hero">
-      <div class="container">
+      <video class="hero-video" autoplay muted loop playsinline poster="logo.png">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
         <h1>Vestígio</h1>
         <p class="tagline">O passado não termina. Muda de lugar.</p>
       </div>
@@ -65,8 +69,8 @@
 
     <section id="drops" class="section section-alt">
       <div class="container">
-        <h2>Primeiro Drop</h2>
-        <div class="piece-grid" id="piece-grid"></div>
+        <h2>Drops</h2>
+        <div id="drops-list"></div>
       </div>
     </section>
 

@@ -217,12 +217,6 @@ nav a.active {
   font-weight: 300;
 }
 
-.manifesto-highlight {
-  font-size: 1.5rem;
-  font-weight: 400 !important;
-  color: var(--color-text) !important;
-}
-
 .manifesto-signature {
   margin-top: 2.5rem !important;
   font-weight: 500;

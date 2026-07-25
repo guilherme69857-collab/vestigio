@@ -13,6 +13,31 @@ if (overlayHeader) {
   window.addEventListener("scroll", updateHeader, { passive: true });
 }
 
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector(".site-header nav");
+if (menuToggle && mainNav) {
+  const backdrop = document.createElement("div");
+  backdrop.className = "nav-backdrop";
+  document.body.appendChild(backdrop);
+
+  const closeMenu = () => {
+    menuToggle.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    mainNav.classList.remove("open");
+    backdrop.classList.remove("open");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    mainNav.classList.toggle("open", isOpen);
+    backdrop.classList.toggle("open", isOpen);
+  });
+
+  backdrop.addEventListener("click", closeMenu);
+  mainNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+}
+
 const dropsList = document.getElementById("drops-list");
 if (dropsList && typeof drops !== "undefined") {
   drops.forEach((drop, dropIndex) => {

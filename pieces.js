@@ -2,7 +2,7 @@
 // Formato galeria: sem preço à mostra, cada peça tem nome, designer e a história (proveniência/material).
 const drops = [
   {
-    title: "1º Drop - 10.8.2026",
+    title: "Drop 1",
     pieces: [
       {
         id: "01",

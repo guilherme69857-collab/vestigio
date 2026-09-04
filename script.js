@@ -64,7 +64,7 @@ if (dropsList && typeof drops !== "undefined") {
       card.innerHTML = `
         <img class="piece-image" src="${encodeURI(piece.img)}" alt="${piece.name}" loading="lazy">
         <h3>${piece.name}</h3>
-        <p class="piece-price">${piece.price}</p>
+        <p class="piece-designer">${piece.designer}</p>
         <p class="piece-story">${piece.story}</p>
       `;
       grid.appendChild(card);
@@ -128,7 +128,7 @@ if (pieceDetail && typeof drops !== "undefined") {
           <a href="drops.html" class="piece-back">&larr; Voltar aos drops</a>
           <p class="piece-detail-number">${drop.title.toUpperCase()} &middot; Nº ${piece.id}</p>
           <h1>${piece.name}</h1>
-          <p class="piece-detail-price">${piece.price}</p>
+          <p class="piece-detail-designer">${piece.designer}</p>
           <p class="piece-detail-story">${piece.story}</p>
           <a href="contato.html" class="piece-detail-cta">Tenho interesse</a>
         </div>

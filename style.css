@@ -214,7 +214,7 @@ nav a.active {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.35s ease;
-    z-index: 150;
+    z-index: 5;
   }
 
   .nav-backdrop.open {

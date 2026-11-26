@@ -114,4 +114,25 @@ const acervo = [
     designer: "Anos 70",
     story: "Luminária de chão articulável, original dos anos 70, com cúpula e base esférica.",
   },
+  {
+    id: "17",
+    img: "acervo/17.JPEG",
+    name: "Cadeiras Bauhaus",
+    designer: "Anos 70",
+    story: "Conjunto de cadeiras cantiléver, produzidas nos anos 70.",
+  },
+  {
+    id: "18",
+    img: "acervo/18.JPEG",
+    name: "Poltrona",
+    designer: "Anos 70 — autor desconhecido",
+    story: "Poltrona com design italiano, revestida em veludo marrom-escuro, com estrutura vazada e formas orgânicas.",
+  },
+  {
+    id: "19",
+    img: "acervo/19.JPEG",
+    name: "Luminária de Chão",
+    designer: "Anos 90",
+    story: "Luminária minimalista dos anos 90, com estrutura totalmente em metal cromado.",
+  },
 ];
